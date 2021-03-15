@@ -6,7 +6,23 @@
     <meta charset="UTF-8">
     <title>Manuel Jiménez</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     </script>
@@ -15,7 +31,7 @@
 <body>
     <img id="userPhoto" src="img/user.png" alt="User Photo">
 
-    <a href="https://www.instagram.com/mjimeneznet" id="userName">@mjimeneznet</a>
+    <a href="https://twitch.tv/mjimeneznet" id="userName">@mjimeneznet</a>
     <div id="links">
         <a class="link youtubeLink" href="https://www.youtube.com/channel/UC_GbNenxiU4cn9gS0V17TjQ" target="_blank"><img src="img/youtube.svg" height="36ox" alt="Youtube" style="margin-right: 8px;">
 YouTube</a>
@@ -36,6 +52,28 @@ YouTube</a>
         </div>
         <div id="youtubeAfter"></div>
 
+	<a class="link youtubeLink" href="https://www.twitch.tv/mjimeneznet" target="_blank"><img src="img/twitch.svg" height="36ox" alt="Twitch" style="margin-right: 8px;">
+Twitch</a>
+        <div id="twitch" class="content">
+            <div class="video" v-for="vod in vods">
+                <a v-bind:href="vod.link" target="_blank">
+                    <img v-bind:src="vod.thumbnail">
+                    <p>{{vod.title}}</p>
+                </a>
+            </div>
+            <div class="container" v-if="loading">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div id="youtubeAfter"></div>
+
+        <a class="link" href="https://twitter.com/mjimeneznet/" target="_blank">
+            <img src="img/twitter.svg" height="24ox" alt="Twitter" style="margin-right: 8px;">Twitter</a>
+ 
         <a class="link" href="https://www.linkedin.com/in/mjimeneznet/" target="_blank"><img src="img/linkedin.svg" height="24ox" alt="LinkedIn" style="margin-right: 8px;">LinkedIn</a>
 
         <a class="link" href="https://github.com/mjimeneznet/" target="_blank">

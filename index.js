@@ -19,3 +19,25 @@ var app = new Vue({
     });
 }
 })
+
+var app = new Vue({
+    el: '#twitch',
+    data: {
+        videos: [],
+        loading: true
+    },
+    created: function () {
+  // GET request using fetch with error handling
+  fetch("https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Ftwitchrss.appspot.com%2Fvod%2Fmjimeneznet")
+    .then((res) => res.json())
+    .then((data) => {
+        const res = data.items
+	this.vods= res.filter(item => item.categories.length > 0)
+	this.loading = false
+    })
+    .catch(error => {
+      this.errorMessage = error;
+      console.error("There was an error!", error);
+    });
+}
+})

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Asap:400,500,600,700&display=swap");
 
 :root {
-  --bgColor: #273345;
+  --bgColor: #5E4700;
   --accentColor: white;
   --font: "Asap", sans-serif;
   --loadingHeight: 10px;
@@ -100,7 +100,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   font-weight: 500;
   font-size: 0.8em;
   line-height: 1.2em;
