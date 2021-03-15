@@ -33,13 +33,13 @@
 
     <a href="https://twitch.tv/mjimeneznet" id="userName">@mjimeneznet</a>
     <div id="links">
-        <a class="link youtubeLink" href="https://www.youtube.com/channel/UC_GbNenxiU4cn9gS0V17TjQ" target="_blank"><img src="img/youtube.svg" height="36ox" alt="Youtube" style="margin-right: 8px;">
-YouTube</a>
-        <div id="youtube" class="content">
-            <div class="video" v-for="video in videos">
-                <a v-bind:href="video.link" target="_blank">
-                    <img v-bind:src="video.thumbnail">
-                    <p>{{video.title}}</p>
+	<a class="link youtubeLink" href="https://www.twitch.tv/mjimeneznet" target="_blank"><img src="img/twitch.svg" height="36ox" alt="Twitch" style="margin-right: 8px;">
+Twitch</a>
+        <div id="twitch" class="content">
+            <div class="video" v-for="vod in vods">
+                <a v-bind:href="vod.link" target="_blank">
+                    <img v-bind:src="vod.thumbnail">
+                    <p>{{vod.title}}</p>
                 </a>
             </div>
             <div class="container" v-if="loading">
@@ -52,13 +52,14 @@ YouTube</a>
         </div>
         <div id="youtubeAfter"></div>
 
-	<a class="link youtubeLink" href="https://www.twitch.tv/mjimeneznet" target="_blank"><img src="img/twitch.svg" height="36ox" alt="Twitch" style="margin-right: 8px;">
-Twitch</a>
-        <div id="twitch" class="content">
-            <div class="video" v-for="vod in vods">
-                <a v-bind:href="vod.link" target="_blank">
-                    <img v-bind:src="vod.thumbnail">
-                    <p>{{vod.title}}</p>
+
+        <a class="link youtubeLink" href="https://www.youtube.com/channel/UC_GbNenxiU4cn9gS0V17TjQ" target="_blank"><img src="img/youtube.svg" height="36ox" alt="Youtube" style="margin-right: 8px;">
+YouTube</a>
+        <div id="youtube" class="content">
+            <div class="video" v-for="video in videos">
+                <a v-bind:href="video.link" target="_blank">
+                    <img v-bind:src="video.thumbnail">
+                    <p>{{video.title}}</p>
                 </a>
             </div>
             <div class="container" v-if="loading">
