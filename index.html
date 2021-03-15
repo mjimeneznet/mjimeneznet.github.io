@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Manuel Jiménez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </script>
+</head>
+
+<body>
+    <img id="userPhoto" src="img/user.png" alt="User Photo">
+
+    <a href="https://www.instagram.com/mjimeneznet" id="userName">@mjimeneznet</a>
+    <div id="links">
+        <a class="link youtubeLink" href="https://www.youtube.com/channel/UC_GbNenxiU4cn9gS0V17TjQ" target="_blank"><img src="img/youtube.svg" height="36ox" alt="Youtube" style="margin-right: 8px;">
+YouTube</a>
+        <div id="youtube" class="content">
+            <div class="video" v-for="video in videos">
+                <a v-bind:href="video.link" target="_blank">
+                    <img v-bind:src="video.thumbnail">
+                    <p>{{video.title}}</p>
+                </a>
+            </div>
+            <div class="container" v-if="loading">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div id="youtubeAfter"></div>
+
+        <a class="link" href="https://www.linkedin.com/in/mjimeneznet/" target="_blank"><img src="img/linkedin.svg" height="24ox" alt="LinkedIn" style="margin-right: 8px;">LinkedIn</a>
+
+        <a class="link" href="https://github.com/mjimeneznet/" target="_blank">
+            <img src="img/github.svg" height="24ox" alt="GitHub" style="margin-right: 8px;">GitHub</a>
+        <a class="link" href="https://www.instagram.com/mjimeneznet/" target="_blank">
+            <img src="img/instagram.svg" height="24ox" alt="Instagram" style="margin-right: 8px;">Instagram</a>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script  src="index.js"></script>
+</body>
+</html>
+
+
